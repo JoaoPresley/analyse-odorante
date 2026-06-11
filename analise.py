@@ -23,6 +23,9 @@ class Analise:
         if self.df_medidas is None:
             print("Erro: Nenhum dado carregado para transformar.")
             return
+        # TRATAMENTO DOS DADOS
+        #   Tranforma a coluna Data Registro para detetime
+        self.df_medidas["Data Registro"] = pd.to_datetime(self.df_medidas["Data Registro"], format="%d/%m/%Y %H:%M:%S")
 
         # Ordena a tabela para agrupar os ID Objeto e ficar as ultimas leituras registradas no final
         self.df_medidas.sort_values(by=["ID Objeto", "Data Registro"], inplace=True)
