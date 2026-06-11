@@ -73,7 +73,7 @@ class Analise:
         ax.set_title("Análise de Odorante por Objeto", fontsize=14, color='black', fontweight='bold')
 
         # Customização das marcações no eixo Y (Somas + Limites)
-        valores_eixo_y = np.unique(np.append(eixo_y, [5, 20]))
+        valores_eixo_y = np.unique(np.append(eixo_y, [5, 20, 0]))
         valores_eixo_y.sort()
         ax.set_yticks(valores_eixo_y)
 
